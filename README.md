@@ -1,4 +1,4 @@
-# 📊 Guia Completo: Allure Report no Reqnroll
+# 📊 Allure Report no Reqnroll
 
 Este guia explica como executar testes e gerar relatórios HTML com o Allure Report no projeto Reqnroll/xUnit.
 
@@ -9,7 +9,6 @@ Este guia explica como executar testes e gerar relatórios HTML com o Allure Rep
 - [Gerando Relatórios](#gerando-relatórios)
 - [Visualizando Relatórios](#visualizando-relatórios)
 - [Fluxo Completo](#fluxo-completo)
-- [Scripts NPM Disponíveis](#scripts-npm-disponíveis)
 - [Troubleshooting](#troubleshooting)
 - [Referências](#referências)
 
@@ -417,15 +416,7 @@ rm -rf allure-results allure-report
     path: allure-report/
 ```
 
-### 3. Não Commitar Resultados
-Certifique-se que `.gitignore` contém:
-```gitignore
-allure-results/
-allure-report/
-allure-history.jsonl
-```
-
-### 4. Tags Úteis
+### 3. Tags Úteis
 Use tags nos cenários para organização:
 ```gherkin
 @smoke @calculator @priority-high
@@ -433,36 +424,6 @@ Scenario: Adicionar dois números
 ```
 
 Essas tags aparecem como labels no Allure.
-
----
-
-## 🎓 Aprendizado Adicional
-
-### Explorar Features Avançadas
-- **Attachments**: Adicionar screenshots nos steps
-- **Severity**: Classificar testes por severidade
-- **Epic/Feature/Story**: Hierarquia de organização
-- **Links**: Integrar com Jira, TestRail, etc.
-
-### Exemplo: Adicionar Screenshot
-```csharp
-[AfterStep]
-public void AfterStep()
-{
-    if (_scenarioContext.TestError != null)
-    {
-        // Adicionar screenshot em caso de falha
-        var screenshot = TakeScreenshot();
-        AllureLifecycle.Instance.AddAttachment(
-            "Screenshot",
-            "image/png",
-            screenshot
-        );
-    }
-    
-    // ... resto do código
-}
-```
 
 ---
 
@@ -482,19 +443,3 @@ dotnet test
 ```
 MSBUILD : error MSB1011: Specify which project or solution file to use because this folder contains more than one project or solution file.
 ```
-
----
-
-## 🆘 Suporte
-
-Encontrou algum problema não documentado aqui?
-
-1. Verifique a seção [Troubleshooting](#troubleshooting)
-2. Consulte as especificações técnicas em `.loop/specs/`
-3. Abra uma issue no repositório do projeto
-
----
-
-**Última Atualização**: Janeiro 2026  
-**Versão Allure CLI**: 3.0.0  
-**Versão Allure.Net.Commons**: 2.14.1
