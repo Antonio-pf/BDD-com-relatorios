@@ -16,7 +16,13 @@ Este guia explica como executar testes e gerar relatórios HTML com o Allure Rep
 
 ## 🎯 O que é Allure Report?
 
-O Allure Report é uma ferramenta de geração de relatórios de testes que cria documentação HTML interativa e rica em detalhes. Com ele você pode:
+O Allure Report é uma ferramenta de geração de relatórios de testes que cria documentação HTML interativa e rica em detalhes.
+
+### 📸 Exemplo de Relatório Gerado
+
+![Exemplo de Relatório Allure](report.png)
+
+### Com ele você pode:
 
 - ✅ Visualizar resultados de testes de forma clara e organizada
 - 📊 Ver estatísticas detalhadas (passed, failed, duration)
