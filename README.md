@@ -358,27 +358,6 @@ npx allure open allure-report --port 8080
 
 ---
 
-## 📚 Navegando no Relatório
-
-### Estrutura do Dashboard
-- **Overview**: Resumo estatístico (passed, failed, broken)
-- **Categories**: Agrupamento de falhas por tipo
-- **Suites**: Organização por features do Reqnroll
-- **Graphs**: Gráficos de tendências
-- **Timeline**: Linha do tempo de execução
-- **Behaviors**: Agrupamento por stories e features
-
-### Detalhes de um Teste
-Ao clicar em um teste, você vê:
-- ✅ Status (passed/failed/broken)
-- ⏱️ Duração
-- 📝 Steps executados (Given/When/Then)
-- 🏷️ Tags e labels
-- ❌ Mensagem de erro (se falhou)
-- 📊 Stack trace completo
-
----
-
 ## 📖 Referências
 
 ### Documentação Oficial
@@ -390,11 +369,6 @@ Ao clicar em um teste, você vê:
 - `allureConfig.json` - Configuração do relatório
 - `Hooks/Hooks.cs` - Integração com Allure
 - `Calculator.Test.csproj` - Dependências NuGet
-
-### Especificações Técnicas
-- `.loop/specs/allure-documentation/002-allure-documentation-tech-spec.md`
-- `.loop/specs/allure-documentation/003-allure-documentation-plan.md`
-- `.loop/specs/allure-documentation/004-allure-documentation-tasks-list.md`
 
 ---
 
